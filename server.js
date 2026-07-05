@@ -11,13 +11,13 @@ const PORT = process.env.PORT || 5000;
 // ---------------------------------------------------------------------------
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || 'dev-secret-change-me',
+    secret: process.env.SESSION_SECRET || 'dev-sec-chng-me-once-again',
     resave: false,
     saveUninitialized: false,
     cookie: {
       httpOnly: true,
       secure: false, // set true when served over HTTPS in production
-      maxAge: 1000 * 60 * 60, // 1 hour
+      maxAge: 1000 * 30 * 60, // 1 hour
     },
   })
 );
@@ -144,5 +144,5 @@ app.get('/auth/logout', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Hello world, my server running at http://localhost:${PORT}`);
 });
