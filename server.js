@@ -4,7 +4,7 @@ const session = require('express-session');
 const { google } = require('googleapis');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5002;
 
 // ---------------------------------------------------------------------------
 // Session (temporary, in-memory — fine for testing, swap for a store + DB later)
