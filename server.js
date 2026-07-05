@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 // ---------------------------------------------------------------------------
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || 'dev-secret-change-me',
+    secret: process.env.SESSION_SECRET || 'dev-secret-change-me-once',
     resave: false,
     saveUninitialized: false,
     cookie: {
